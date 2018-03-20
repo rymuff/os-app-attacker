@@ -34,7 +34,6 @@ public class MainActivity extends AppCompatActivity {
         FirebaseDatabase database = FirebaseDatabase.getInstance();
         DatabaseReference myRef = database.getReference("refreshedToken");
 
-
         myRef.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
@@ -70,7 +69,6 @@ public class MainActivity extends AppCompatActivity {
                             httpPost.setEntity(se);
                             httpPost.setHeader("Content-type", "application/json");
                             httpPost.setHeader("Authorization", "key=AIzaSyBBZ-YiLDIk6KET-C0GFB0MV3P-DQxOChI");
-
 
                             httpclient.execute(httpPost);
                         } catch (IOException | JSONException e) {
